@@ -1,0 +1,34 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Prisma
+prisma/dev.db
+prisma/dev.db-journal
+
+# VS Code
+.vscode/
+
+# Build output
+dist/
+build/
+
+# Misc
+*.tgz
+.idea/
+*.sublime-workspace
+*.sublime-project
