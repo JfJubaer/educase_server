@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const schoolRoutes = require("./routes/schoolRoutes");
-const { testConnection } = require("./config/database");
 
 dotenv.config();
 
@@ -21,15 +20,6 @@ app.use((req, res, next) => {
 
 // Routes
 app.use("/", schoolRoutes);
-
-// Health check endpoint
-app.get("/health", (req, res) => {
-  res.status(200).json({
-    success: true,
-    message: "API is running smoothly",
-    timestamp: new Date().toISOString(),
-  });
-});
 
 // 404 handler for undefined routes
 app.use((req, res) => {

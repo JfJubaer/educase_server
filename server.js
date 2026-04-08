@@ -14,7 +14,6 @@ const startServer = async () => {
 
   app.listen(PORT, () => {
     console.log(` Server is running on port ${PORT}`);
-    console.log(` Health check: http://localhost:${PORT}/health`);
     console.log(` Add School: POST http://localhost:${PORT}/addSchool`);
     console.log(` List Schools: GET http://localhost:${PORT}/listSchools`);
   });
