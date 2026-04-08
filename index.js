@@ -1,13 +1,8 @@
+require("dotenv").config();
 const express = require("express");
-const pool = require("./db");
 
 const app = express();
 app.use(express.json());
-
-pool
-  .connect()
-  .then(() => console.log("Connected to PostgreSQL"))
-  .catch((err) => console.error("Connection error", err));
 
 // Create table (run once)
 app.get("/create", async (req, res) => {
